@@ -7,17 +7,17 @@
 ####
 
 team_name = 'Mason Foxs Team' # Only 10 chars displayed.
-strategy_name = 'Copycat Strategy do what they did the turn before'
+strategy_name = 'Collude every other turn betray the other'
 strategy_description = 'How does this strategy decide?'
 
 def move(my_history, their_history, my_score, their_score):
-    if len(my_history)/2==0:
+    if len(my_history) == 0:
         return 'c'
-    if their_history[-1] == 'c':
+    if my_history[-1] == 'b':
         return 'c'
     else:
-        return 'b'
-
+        return 'b' 
+         
         # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].
